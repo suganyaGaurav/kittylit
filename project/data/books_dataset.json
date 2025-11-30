@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Mystery of Animals",
+    "author": "Suresh K",
+    "age_group": "6-9",
+    "genre": "Mythology",
+    "language": "Hindi",
+    "publication_year": 2020
+  },
+  {
+    "title": "Colors of Dreams",
+    "author": "Vinodhini M",
+    "age_group": "4-6",
+    "genre": "Nature",
+    "language": "Tamil",
+    "publication_year": 2015
+  },
+  {
+    "title": "Adventures in Dreams",
+    "author": "Aarthi R",
+    "age_group": "5-8",
+    "genre": "Mythology",
+    "language": "English",
+    "publication_year": 2004
+  },
+  {
+    "title": "Secrets of Mountains",
+    "author": "Leela V",
+    "age_group": "6-9",
+    "genre": "Values",
+    "language": "English",
+    "publication_year": 2014
+  },
+  {
+    "title": "Learning with Myths",
+    "author": "Rani G",
+    "age_group": "6-9",
+    "genre": "Values",
+    "language": "Hindi",
+    "publication_year": 2011
+  },
+  {
+    "title": "Stories of Kindness",
+    "author": "Leela V",
+    "age_group": "6-9",
+    "genre": "Education",
+    "language": "Hindi",
+    "publication_year": 2003
+  },
+  {
+    "title": "Adventures in Mountains",
+    "author": "Leela V",
+    "age_group": "4-6",
+    "genre": "Mythology",
+    "language": "Hindi",
+    "publication_year": 2007
+  },
+  {
+    "title": "Stories of Rainbows",
+    "author": "Ravi Kumar",
+    "age_group": "5-8",
+    "genre": "Education",
+    "language": "Tamil",
+    "publication_year": 2011
+  },
+  {
+    "title": "Journey through Oceans",
+    "author": "Rani G",
+    "age_group": "4-6",
+    "genre": "Education",
+    "language": "Tamil",
+    "publication_year": 2013
+  }
+]

@@ -1,0 +1,24 @@
+Agents Module – Overview
+
+This folder contains the core agent-orchestration logic for the KittyLit system.
+Each file is modular, explainable, and focused on a single responsibility, following clean-architecture principles.
+
+File Descriptions:
+
+__init__.py :  Initializes the Agents module and exposes reusable functions/classes for the rest of the application.
+
+agent_tools.py : Defines all helper tools and utility functions used by the Agent Orchestrator, including: Cache lookup helpers , DB fetch helpers , Query-cleaning utilities , Ensures consistent, secure data handling.
+
+decision_rules.py : Contains rule-based logic to help the agent decide: When to pull data from cache, When to switch to database , When to call fallback or safety mechanisms, Acts as the “brain” for conditional routing.
+
+errors.py : Centralized error-handling module with: Custom exception classes , Structured logs , Safe-fallback responses, Supports reliability, observability, and governance.
+
+merge_and_rank.py : Combines raw results from cache + database + agent retrieval, then: Deduplicates entries, Scores them, Returns a ranked result list Ensures high-quality, consistent final outputs.
+
+orchestrator.py : The main Agent Orchestrator. Coordinates the full flow: Accepts the user query, Applies decision rules, Routes through cache/DB/live sources, Merges + ranks results, Returns the final structured response
+
+This file reflects the system’s end-to-end intelligence.
+
+routes.py : Defines clean functions used by app routes (e.g., /search), ensuring all backend endpoints use the shared agent pipeline consistently and safely. Structure Principles, Separation of concerns, Explainability logs for reproducibility
+
+Governance-first design (filters, safe fallbacks, structured errors), Testable and modular layout

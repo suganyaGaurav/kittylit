@@ -1,0 +1,82 @@
+app Folder Overview
+
+The app/ module contains all backend components for the KittyLit application — including caching, 
+configuration management, request routing, data utilities, service logic, and governance filters. 
+Each file is separated for clarity, maintainability, and long-term scalability.
+
+1. __init__.py :
+   
+* Initializes the app package.
+* Handles module-level imports and ensures clean namespace structure.
+
+3. cache.py : 
+
+* Implements caching for books and metadata.
+* Used to reduce DB lookups and speed up UI + agent responses.
+
+Purpose: Faster runtime execution, warm-start mechanisms.
+Notes: Designed to support in-memory cache or Redis in future.
+
+3. config.py :
+
+* Central configuration file.
+* Controls environment variables, paths, feature flags, and operational settings.
+
+Purpose: Keeps all constants in one place.
+
+4. data_loader.py :
+
+* Reads dataset files (JSON/DB) and prepares dropdown values for UI.
+* Separates data logic from the main application.
+
+Purpose: Clean preprocessing and reusable data utilities.
+
+5. db_utils.py :
+
+* Database utility functions for SQLite.
+* Handles connections, queries, inserts, updates, and result formatting.
+
+Purpose: Keeps DB operations clean and modular.
+
+6. errors.py :
+
+* Custom exceptions and structured error handlers.
+* Used by UI, agents, and backend for predictable error flows.
+
+Purpose: Makes debugging easier and enforces governance.
+
+7. options.py :
+
+* Stores constants such as VALID_YEARS, ALLOWED_GENRES, etc.
+* Imported by routes and services.
+
+Purpose: Single source of truth for dropdowns and validation rules.
+
+8. routes.py : Defines Flask routes for
+
+* Homepage
+* Book search
+* Dropdown loading
+* API endpoints
+
+Purpose: Clean HTTP routing without mixing business logic.
+
+9. services.py : Service layer containing business logic for
+
+* Book search
+* Recommendation orchestration
+* Connecting DB + cache + RAG
+
+Purpose: Keeps logic separate from API endpoints, enabling testing.
+
+10. utils.py : Helper utilities used throughout the project.
+Examples: formatting, logging helpers, validation utilities.
+
+Purpose: Avoid duplicated logic in routes/services.
+
+11. gateways/ (folder) : 
+
+* Integrations with external systems (future-friendly).
+* Example: external APIs for book metadata.
+
+Purpose: Keeps integration logic outside core business flow.
